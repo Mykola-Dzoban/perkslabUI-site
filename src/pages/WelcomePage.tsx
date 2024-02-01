@@ -6,7 +6,7 @@ const WelcomePage = () => {
 	return (
 		<>
 			<Navbar />
-			<div className='flex items-start'>
+			<div className='flex'>
 				<Sidebar />
 				<Outlet />
 			</div>

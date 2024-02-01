@@ -1,12 +1,24 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Accordion from './components/Accordion';
 import ErrorPage from './pages/ErrorPage';
 import WelcomePage from './pages/WelcomePage';
+import Instruction from './pages/Instruction';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <WelcomePage />,
 		errorElement: <ErrorPage />,
+		children: [
+			{
+				index: true,
+				element: <Instruction />,
+			},
+			{
+				path: 'accordion',
+				element: <Accordion />,
+			},
+		],
 	},
 ]);
 
